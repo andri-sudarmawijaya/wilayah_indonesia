@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains wilayah_indonesia_regency.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function wilayah_indonesia_regency_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the wilayah_indonesia_regency module.
+    case 'help.page.wilayah_indonesia_regency':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Manage Regency Data') . '</p>';
+      return $output;
+
+    default:
+  }
+}

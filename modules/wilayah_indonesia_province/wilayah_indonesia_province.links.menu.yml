@@ -1,0 +1,14 @@
+
+# Province menu items definition
+entity.province.collection:
+  title: 'Province list'
+  route_name: entity.province.collection
+  description: 'List Province entities'
+  parent: system.admin_structure
+  weight: 100
+
+province.admin.structure.settings:
+  title: 'Province settings'
+  description: 'Configure Province entities'
+  route_name: province.settings
+  parent: system.admin_structure

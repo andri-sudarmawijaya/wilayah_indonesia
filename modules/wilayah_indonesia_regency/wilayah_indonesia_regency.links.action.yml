@@ -1,0 +1,5 @@
+entity.regency.add_form:
+  route_name: entity.regency.add_form
+  title: 'Add Regency'
+  appears_on:
+    - entity.regency.collection

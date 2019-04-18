@@ -1,0 +1,19 @@
+add province entities:
+  title: 'Create new Province entities'
+
+administer province entities:
+  title: 'Administer Province entities'
+  description: 'Allow to access the administration form to configure Province entities.'
+  restrict access: true
+
+delete province entities:
+  title: 'Delete Province entities'
+
+edit province entities:
+  title: 'Edit Province entities'
+
+view published province entities:
+  title: 'View published Province entities'
+
+view unpublished province entities:
+  title: 'View unpublished Province entities'

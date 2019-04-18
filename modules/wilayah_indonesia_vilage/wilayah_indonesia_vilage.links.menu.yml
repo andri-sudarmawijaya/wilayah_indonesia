@@ -1,0 +1,14 @@
+
+# Vilage menu items definition
+entity.vilage.collection:
+  title: 'Vilage list'
+  route_name: entity.vilage.collection
+  description: 'List Vilage entities'
+  parent: system.admin_structure
+  weight: 100
+
+vilage.admin.structure.settings:
+  title: 'Vilage settings'
+  description: 'Configure Vilage entities'
+  route_name: vilage.settings
+  parent: system.admin_structure

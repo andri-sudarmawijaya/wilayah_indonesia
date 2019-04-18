@@ -1,0 +1,14 @@
+
+# Regency menu items definition
+entity.regency.collection:
+  title: 'Regency list'
+  route_name: entity.regency.collection
+  description: 'List Regency entities'
+  parent: system.admin_structure
+  weight: 100
+
+regency.admin.structure.settings:
+  title: 'Regency settings'
+  description: 'Configure Regency entities'
+  route_name: regency.settings
+  parent: system.admin_structure

@@ -1,0 +1,22 @@
+# Regency routing definition
+regency.settings_tab:
+  route_name: regency.settings
+  title: 'Settings'
+  base_route: regency.settings
+
+entity.regency.canonical:
+  route_name: entity.regency.canonical
+  base_route: entity.regency.canonical
+  title: 'View'
+
+entity.regency.edit_form:
+  route_name: entity.regency.edit_form
+  base_route: entity.regency.canonical
+  title: 'Edit'
+
+entity.regency.delete_form:
+  route_name:  entity.regency.delete_form
+  base_route:  entity.regency.canonical
+  title: Delete
+  weight: 10
+

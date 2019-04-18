@@ -1,0 +1,7 @@
+name: 'Wilayah Indonesia Province'
+type: module
+description: 'Manage Province Data'
+core: 8.x
+package: 'Wilayah Indonesia'
+dependencies:
+  - wilayah_indonesia

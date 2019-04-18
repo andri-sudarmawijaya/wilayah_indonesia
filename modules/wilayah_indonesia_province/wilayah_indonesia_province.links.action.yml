@@ -1,0 +1,5 @@
+entity.province.add_form:
+  route_name: entity.province.add_form
+  title: 'Add Province'
+  appears_on:
+    - entity.province.collection

@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains wilayah_indonesia_district.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function wilayah_indonesia_district_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the wilayah_indonesia_district module.
+    case 'help.page.wilayah_indonesia_district':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Manage District Data') . '</p>';
+      return $output;
+
+    default:
+  }
+}

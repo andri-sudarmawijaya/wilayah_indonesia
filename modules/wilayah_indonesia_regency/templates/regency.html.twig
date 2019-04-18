@@ -1,0 +1,22 @@
+{#
+/**
+ * @file regency.html.twig
+ * Default theme implementation to present Regency data.
+ *
+ * This template is used when viewing Regency pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_regency()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('regency') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

@@ -1,0 +1,19 @@
+add regency entities:
+  title: 'Create new Regency entities'
+
+administer regency entities:
+  title: 'Administer Regency entities'
+  description: 'Allow to access the administration form to configure Regency entities.'
+  restrict access: true
+
+delete regency entities:
+  title: 'Delete Regency entities'
+
+edit regency entities:
+  title: 'Edit Regency entities'
+
+view published regency entities:
+  title: 'View published Regency entities'
+
+view unpublished regency entities:
+  title: 'View unpublished Regency entities'

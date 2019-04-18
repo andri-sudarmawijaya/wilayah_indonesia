@@ -1,0 +1,19 @@
+add district entities:
+  title: 'Create new District entities'
+
+administer district entities:
+  title: 'Administer District entities'
+  description: 'Allow to access the administration form to configure District entities.'
+  restrict access: true
+
+delete district entities:
+  title: 'Delete District entities'
+
+edit district entities:
+  title: 'Edit District entities'
+
+view published district entities:
+  title: 'View published District entities'
+
+view unpublished district entities:
+  title: 'View unpublished District entities'

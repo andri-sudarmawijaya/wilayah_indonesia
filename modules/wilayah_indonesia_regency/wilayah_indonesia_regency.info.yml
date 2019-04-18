@@ -1,0 +1,7 @@
+name: 'Wilayah Indonesia Regency'
+type: module
+description: 'Manage Regency Data'
+core: 8.x
+package: 'Wilayah Indonesia'
+dependencies:
+  - wilayah_indonesia_province

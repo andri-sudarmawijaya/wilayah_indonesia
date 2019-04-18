@@ -1,0 +1,22 @@
+# Province routing definition
+province.settings_tab:
+  route_name: province.settings
+  title: 'Settings'
+  base_route: province.settings
+
+entity.province.canonical:
+  route_name: entity.province.canonical
+  base_route: entity.province.canonical
+  title: 'View'
+
+entity.province.edit_form:
+  route_name: entity.province.edit_form
+  base_route: entity.province.canonical
+  title: 'Edit'
+
+entity.province.delete_form:
+  route_name:  entity.province.delete_form
+  base_route:  entity.province.canonical
+  title: Delete
+  weight: 10
+

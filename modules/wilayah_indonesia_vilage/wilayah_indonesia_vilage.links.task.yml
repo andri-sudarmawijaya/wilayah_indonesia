@@ -1,0 +1,22 @@
+# Vilage routing definition
+vilage.settings_tab:
+  route_name: vilage.settings
+  title: 'Settings'
+  base_route: vilage.settings
+
+entity.vilage.canonical:
+  route_name: entity.vilage.canonical
+  base_route: entity.vilage.canonical
+  title: 'View'
+
+entity.vilage.edit_form:
+  route_name: entity.vilage.edit_form
+  base_route: entity.vilage.canonical
+  title: 'Edit'
+
+entity.vilage.delete_form:
+  route_name:  entity.vilage.delete_form
+  base_route:  entity.vilage.canonical
+  title: Delete
+  weight: 10
+

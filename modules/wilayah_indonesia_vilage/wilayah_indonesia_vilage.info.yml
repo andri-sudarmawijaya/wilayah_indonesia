@@ -1,0 +1,7 @@
+name: 'Wilayah Indonesia Vilage'
+type: module
+description: 'Manage Vilage Data'
+core: 8.x
+package: 'Wilayah Indonesia'
+dependencies:
+  - wilayah_indonesia_district

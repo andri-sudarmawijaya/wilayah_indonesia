@@ -1,0 +1,7 @@
+name: 'Wilayah Indonesia District'
+type: module
+description: 'Manage District Data'
+core: 8.x
+package: 'Wilayah Indonesia'
+dependencies:
+  - wilayah_indonesia_regency

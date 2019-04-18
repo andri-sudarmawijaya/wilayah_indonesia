@@ -1,0 +1,19 @@
+add vilage entities:
+  title: 'Create new Vilage entities'
+
+administer vilage entities:
+  title: 'Administer Vilage entities'
+  description: 'Allow to access the administration form to configure Vilage entities.'
+  restrict access: true
+
+delete vilage entities:
+  title: 'Delete Vilage entities'
+
+edit vilage entities:
+  title: 'Edit Vilage entities'
+
+view published vilage entities:
+  title: 'View published Vilage entities'
+
+view unpublished vilage entities:
+  title: 'View unpublished Vilage entities'

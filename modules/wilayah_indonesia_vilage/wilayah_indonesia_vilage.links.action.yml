@@ -1,0 +1,5 @@
+entity.vilage.add_form:
+  route_name: entity.vilage.add_form
+  title: 'Add Vilage'
+  appears_on:
+    - entity.vilage.collection
