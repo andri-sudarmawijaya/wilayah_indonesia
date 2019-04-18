@@ -1,0 +1,5 @@
+name: 'Wilayah Indonesia'
+type: module
+description: 'Indonesia Administrative Region for Drupal 8'
+core: 8.x
+package: 'Wilayah Indonesia'

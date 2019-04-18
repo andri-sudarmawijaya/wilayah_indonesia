@@ -1,0 +1,14 @@
+{
+  "name": "andri-sudarmawijaya/wilayah_indonesia",
+  "type": "drupal-module",
+  "description": "Indonesia Administrative Region for Drupal 8",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://github.com/andri-sudarmawijaya/wilayah_indonesia",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://github.com/andri-sudarmawijaya/wilayah_indonesia/issues",
+    "source": "https://github.com/andri-sudarmawijaya/wilayah_indonesia"
+  },
+  "require": { }
+}
