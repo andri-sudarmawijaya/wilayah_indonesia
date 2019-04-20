@@ -21,7 +21,37 @@ class RegencyForm extends ContentEntityForm {
 
     $entity = $this->entity;
 
+	if(!$entity->get('id')->value){
+	  $form['regency_code'] = [
+        '#title' => 'Code',
+        '#type' => 'number',
+        '#default_value' => '0',
+		'#weight' => '-10',
+		'#required' => TRUE,
+      ];
+	}
+	
     return $form;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function validateForm(array &$form, FormStateInterface $form_state) {
+    /* @var $entity \Drupal\wilayah_indonesia_province\Entity\Province */		
+	parent::validateForm($form, $form_state);
+
+    $entity = $this->entity;
+
+	if(is_null($entity->id())){
+	  $id = \Drupal::entityQuery('regency')
+	        ->condition('id', $form_state->getValue('regency_code'))
+			->range('0', '1')
+			->execute();
+	  if(!empty($id)){
+	    $form_state->setErrorByName('regency_code',"The regency code field already exist");
+	  }
+	}
   }
 
   /**
@@ -29,7 +59,11 @@ class RegencyForm extends ContentEntityForm {
    */
   public function save(array $form, FormStateInterface $form_state) {
     $entity = $this->entity;
-
+	
+	if(is_null($entity->id())){
+		$entity->set('id', $form_state->getValue('regency_code'));
+	}
+	
     $status = parent::save($form, $form_state);
 
     switch ($status) {
