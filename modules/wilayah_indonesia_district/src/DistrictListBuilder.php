@@ -6,6 +6,9 @@ use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\EntityListBuilder;
 use Drupal\Core\Link;
 
+use Drupal\wilayah_indonesia_regency\Entity\Regency;
+use Drupal\wilayah_indonesia_province\Entity\Province;
+
 /**
  * Defines a class to build a listing of District entities.
  *
@@ -36,16 +39,26 @@ class DistrictListBuilder extends EntityListBuilder {
       'entity.district.edit_form',
       ['district' => $entity->id()]
     );
-    $row['province'] = Link::createFromRoute(
-      $entity->province_id->entity->label(),
-      'entity.province.canonical',
-      ['province' => $entity->province_id->target_id]
-    );
-    $row['regency'] = Link::createFromRoute(
-      $entity->regency_id->entity->label(),
-      'entity.regency.canonical',
-      ['regency' => $entity->regency_id->target_id]
-    );
+	if($entity->province_id->entity){
+      $row['province'] = Link::createFromRoute(
+        $entity->province_id->entity->label(),
+        'entity.province.canonical',
+        ['province' => $entity->province_id->target_id]
+      );
+	}
+	else{
+		$row['province'] = NULL;
+	}
+	if($entity->regency_id->entity){
+      $row['regency'] = Link::createFromRoute(
+        $entity->regency_id->entity->label(),
+        'entity.regency.canonical',
+        ['regency' => $entity->regency_id->target_id]
+      );
+	}
+	else{
+		$row['regency'] = NULL;
+	}
     return $row + parent::buildRow($entity);
   }
 

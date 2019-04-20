@@ -37,21 +37,36 @@ class VilageListBuilder extends EntityListBuilder {
       'entity.vilage.canonical',
       ['vilage' => $entity->id()]
     );
-    $row['province'] = Link::createFromRoute(
-      $entity->province_id->entity->label(),
-      'entity.province.canonical',
-      ['province' => $entity->province_id->target_id]
-    );
-    $row['regency'] = Link::createFromRoute(
-      $entity->regency_id->entity->label(),
-      'entity.regency.canonical',
-      ['regency' => $entity->regency_id->target_id]
-    );
+	if($entity->province_id->entity){
+      $row['province'] = Link::createFromRoute(
+        $entity->province_id->entity->label(),
+        'entity.province.canonical',
+        ['province' => $entity->province_id->target_id]
+      );
+	}
+	else{
+		$row['province'] = NULL;
+	}
+	if($entity->regency_id->entity){
+      $row['regency'] = Link::createFromRoute(
+        $entity->regency_id->entity->label(),
+        'entity.regency.canonical',
+        ['regency' => $entity->regency_id->target_id]
+      );
+	}
+	else{
+		$row['regency'] = NULL;
+	}
+	if($entity->district_id->entity){
     $row['district'] = Link::createFromRoute(
       $entity->district_id->entity->label(),
       'entity.district.canonical',
       ['district' => $entity->district_id->target_id]
     );
+	}
+	else{
+		$row['district'] = NULL;
+	}
     return $row + parent::buildRow($entity);
   }
 
