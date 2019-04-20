@@ -233,7 +233,7 @@ class District extends ContentEntityBase implements DistrictInterface {
       ->setDisplayConfigurable('view', TRUE);
 
     $fields['regency_id'] = BaseFieldDefinition::create('entity_reference')
-      ->setLabel(t('Province'))
+      ->setLabel(t('Regency'))
       ->setDescription(t('The regency ID of author of the Regency entity.'))
       ->setRevisionable(TRUE)
       ->setSetting('target_type', 'regency')
