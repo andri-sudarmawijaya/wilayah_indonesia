@@ -41,7 +41,7 @@ class VilageListBuilder extends EntityListBuilder {
       $row['province'] = Link::createFromRoute(
         $entity->province_id->entity->label(),
         'entity.province.canonical',
-        ['province' => $entity->province_id->target_id]
+        ['province' => $entity->district_id->entity->regency_id->entity->province_id->target_id]
       );
 	}
 	else{
@@ -51,7 +51,7 @@ class VilageListBuilder extends EntityListBuilder {
       $row['regency'] = Link::createFromRoute(
         $entity->regency_id->entity->label(),
         'entity.regency.canonical',
-        ['regency' => $entity->regency_id->target_id]
+        ['regency' => $entity->district_id->entity->regency_id->target_id]
       );
 	}
 	else{

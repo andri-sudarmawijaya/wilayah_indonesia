@@ -194,7 +194,10 @@ class Vilage extends ContentEntityBase implements VilageInterface {
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE)
       ->setRequired(TRUE);
-
+    /*
+	 * Remove province_id and regency_id to simplify relation
+	 * replace it with VilageViewsData
+	 *
     $fields['province_id'] = BaseFieldDefinition::create('entity_reference')
       ->setLabel(t('Province'))
       ->setDescription(t('The province ID of author of the Regency entity.'))
@@ -254,7 +257,7 @@ class Vilage extends ContentEntityBase implements VilageInterface {
       ])
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
-	  
+	*/  
     $fields['district_id'] = BaseFieldDefinition::create('entity_reference')
       ->setLabel(t('District'))
       ->setDescription(t('The district ID of author of the Regency entity.'))

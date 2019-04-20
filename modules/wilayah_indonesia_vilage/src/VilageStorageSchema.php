@@ -17,7 +17,8 @@ class VilageStorageSchema extends SqlContentEntityStorageSchema {
     $schema = parent::getEntitySchema($entity_type, $reset);
 
     $schema['wilayah_indonesia_vilage']['indexes'] += array(
-      'vilage__province' => array('id', 'province_id', 'regency_id', 'district_id'),
+      'vilage__name' => array('name'),
+      //'vilage__province' => array('id', 'province_id', 'regency_id', 'district_id'),
     );
 
     return $schema;

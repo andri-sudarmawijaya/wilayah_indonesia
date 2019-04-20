@@ -36,7 +36,7 @@ class DistrictListBuilder extends EntityListBuilder {
     $row['id'] = $entity->id();
     $row['name'] = Link::createFromRoute(
       $entity->label(),
-      'entity.district.edit_form',
+      'entity.district.canonical',
       ['district' => $entity->id()]
     );
 	if($entity->province_id->entity){

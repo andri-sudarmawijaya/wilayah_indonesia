@@ -66,7 +66,7 @@ class VilageForm extends ContentEntityForm {
 	if(is_null($entity->id())){
 		$entity->set('id', $form_state->getValue('vilage_code'));
 	}
-
+    /*
 	$district= District::load($form_state->getValue('district_id')[0]['target_id']);
 	$regency = $district->regency_id->entity;
 	
@@ -77,7 +77,7 @@ class VilageForm extends ContentEntityForm {
 	    $entity->set('province_id', $province->id());
 	  }
 	}
-
+    */
     $status = parent::save($form, $form_state);
 
     switch ($status) {
