@@ -71,7 +71,7 @@ class DistrictForm extends ContentEntityForm {
 	      ->condition('id', $form_state->getValue('regency_id')[0]['target_id'])
 		  ->range('0', '1')
 		  ->execute();
-    if($id){
+    if($regency_id){
 	  $regency= Regency::load(reset($regency_id));
 	  if($regency->province_id->target_id){
 		$entity->set('province_id', $regency->province_id->target_id);
