@@ -260,7 +260,7 @@ class Vilage extends ContentEntityBase implements VilageInterface {
 	*/  
     $fields['district_id'] = BaseFieldDefinition::create('entity_reference')
       ->setLabel(t('District'))
-      ->setDescription(t('The district ID of author of the Regency entity.'))
+      ->setDescription(t('The district ID of author of the Vilage entity.'))
       ->setRevisionable(TRUE)
       ->setSetting('target_type', 'district')
       ->setSetting('handler', 'default')
