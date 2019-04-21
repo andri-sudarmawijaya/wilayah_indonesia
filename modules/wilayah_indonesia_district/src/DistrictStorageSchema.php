@@ -17,7 +17,7 @@ class DistrictStorageSchema extends SqlContentEntityStorageSchema {
     $schema = parent::getEntitySchema($entity_type, $reset);
 
     $schema['wilayah_indonesia_district']['indexes'] += array(
-      'district__province' => array('id', 'province_id', 'regency_id'),
+      'district__name' => array('name'),
     );
 
     return $schema;

@@ -32,8 +32,6 @@ class DistrictForm extends ContentEntityForm {
 		'#required' => TRUE,
       ];
 	}
-	$form['province_id']['#access'] = FALSE;
-
     return $form;
   }
 
@@ -67,6 +65,7 @@ class DistrictForm extends ContentEntityForm {
 	if(is_null($entity->id())){
 		$entity->set('id', $form_state->getValue('district_code'));
 	}
+	/*
     $regency_id = \Drupal::entityQuery('regency')
 	      ->condition('id', $form_state->getValue('regency_id')[0]['target_id'])
 		  ->range('0', '1')
@@ -77,7 +76,7 @@ class DistrictForm extends ContentEntityForm {
 		$entity->set('province_id', $regency->province_id->target_id);
 	  }
 	}
-	
+	*/
     $status = parent::save($form, $form_state);
 
     switch ($status) {

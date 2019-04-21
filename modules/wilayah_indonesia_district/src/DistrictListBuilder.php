@@ -21,10 +21,10 @@ class DistrictListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildHeader() {
-    $header['id'] = $this->t('District ID');
+    $header['id'] = $this->t('ID');
     $header['name'] = $this->t('Name');
-    $header['province'] = $this->t('Province');
     $header['regency'] = $this->t('Regency');
+    $header['province'] = $this->t('Province');
     return $header + parent::buildHeader();
   }
 
@@ -39,22 +39,22 @@ class DistrictListBuilder extends EntityListBuilder {
       'entity.district.canonical',
       ['district' => $entity->id()]
     );
-	if($entity->province_id->entity){
-      $row['province'] = Link::createFromRoute(
-        $entity->province_id->entity->label(),
-        'entity.province.canonical',
-        ['province' => $entity->province_id->target_id]
-      );
-	}
-	else{
-		$row['province'] = NULL;
-	}
 	if($entity->regency_id->entity){
       $row['regency'] = Link::createFromRoute(
         $entity->regency_id->entity->label(),
         'entity.regency.canonical',
         ['regency' => $entity->regency_id->target_id]
       );
+	  if($entity->regency_id->entity->province_id->entity){
+        $row['province'] = Link::createFromRoute(
+          $entity->regency_id->entity->province_id->entity->label(),
+          'entity.province.canonical',
+          ['province' => $entity->regency_id->entity->province_id->target_id]
+        );
+	  }
+	  else{
+		$row['regency'] = NULL;
+	  }
 	}
 	else{
 		$row['regency'] = NULL;
