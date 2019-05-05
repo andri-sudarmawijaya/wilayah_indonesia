@@ -169,7 +169,7 @@ class District extends ContentEntityBase implements DistrictInterface {
       ->setTranslatable(TRUE)
       ->setDisplayOptions('view', [
         'label' => 'hidden',
-        'type' => 'author',
+        'type' => 'hidden',
         'weight' => 0,
       ])
       ->setDisplayOptions('form', [
@@ -238,7 +238,7 @@ class District extends ContentEntityBase implements DistrictInterface {
       ->setDefaultValue(TRUE)
       ->setDisplayOptions('form', [
         'type' => 'boolean_checkbox',
-        'weight' => -3,
+        'weight' => 10,
       ]);
 
     $fields['created'] = BaseFieldDefinition::create('created')

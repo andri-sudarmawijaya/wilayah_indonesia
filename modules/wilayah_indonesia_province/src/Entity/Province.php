@@ -157,7 +157,7 @@ class Province extends ContentEntityBase implements ProvinceInterface {
       ->setTranslatable(TRUE)
       ->setDisplayOptions('view', [
         'label' => 'hidden',
-        'type' => 'author',
+        'type' => 'hidden',
         'weight' => 0,
       ])
       ->setDisplayOptions('form', [
@@ -200,7 +200,7 @@ class Province extends ContentEntityBase implements ProvinceInterface {
       ->setDefaultValue(TRUE)
       ->setDisplayOptions('form', [
         'type' => 'boolean_checkbox',
-        'weight' => -3,
+        'weight' => 10,
       ]);
 
     $fields['created'] = BaseFieldDefinition::create('created')

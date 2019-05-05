@@ -158,7 +158,7 @@ class Vilage extends ContentEntityBase implements VilageInterface {
       ->setTranslatable(TRUE)
       ->setDisplayOptions('view', [
         'label' => 'hidden',
-        'type' => 'author',
+        'type' => 'hidden',
         'weight' => 0,
       ])
       ->setDisplayOptions('form', [
@@ -294,7 +294,7 @@ class Vilage extends ContentEntityBase implements VilageInterface {
       ->setDefaultValue(TRUE)
       ->setDisplayOptions('form', [
         'type' => 'boolean_checkbox',
-        'weight' => -3,
+        'weight' => 10,
       ]);
 
     $fields['created'] = BaseFieldDefinition::create('created')

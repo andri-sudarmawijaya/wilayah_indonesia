@@ -168,7 +168,7 @@ class Regency extends ContentEntityBase implements RegencyInterface {
       ->setTranslatable(TRUE)
       ->setDisplayOptions('view', [
         'label' => 'hidden',
-        'type' => 'author',
+        'type' => 'hidden',
         'weight' => 0,
       ])
       ->setDisplayOptions('form', [
