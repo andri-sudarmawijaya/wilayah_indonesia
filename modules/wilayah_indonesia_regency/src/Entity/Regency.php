@@ -185,7 +185,7 @@ class Regency extends ContentEntityBase implements RegencyInterface {
       ->setDisplayConfigurable('view', TRUE);
 
     $fields['name'] = BaseFieldDefinition::create('string')
-      ->setLabel(t('Name'))
+      ->setLabel(t('Kabupaten/Kota'))
       ->setDescription(t('The name of the Regency entity.'))
       ->setSettings([
         'max_length' => 255,

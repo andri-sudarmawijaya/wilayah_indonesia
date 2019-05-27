@@ -1,0 +1,9 @@
+
+wilayah_indonesia_district.district_generate_form:
+  path: '/wilayah_indonesia_district/form/district_generate'
+  defaults:
+    _form: '\Drupal\wilayah_indonesia_district\Form\DistrictGenerateForm'
+    _title: 'DistrictGenerateForm'
+  requirements:
+    _access: 'TRUE'
+  

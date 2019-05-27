@@ -1,0 +1,9 @@
+
+wilayah_indonesia_vilage.vilage_generate_form:
+  path: '/wilayah_indonesia_vilage/form/vilage_generate'
+  defaults:
+    _form: '\Drupal\wilayah_indonesia_vilage\Form\VilageGenerateForm'
+    _title: 'VilageGenerateForm'
+  requirements:
+    _access: 'TRUE'
+  

@@ -1,0 +1,9 @@
+
+wilayah_indonesia_regency.regency_generate_form:
+  path: '/wilayah_indonesia_regency/form/regency_generate'
+  defaults:
+    _form: '\Drupal\wilayah_indonesia_regency\Form\RegencyGenerateForm'
+    _title: 'RegencyGenerateForm'
+  requirements:
+    _access: 'TRUE'
+  

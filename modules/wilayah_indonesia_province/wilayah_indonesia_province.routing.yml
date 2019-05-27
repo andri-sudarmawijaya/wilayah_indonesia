@@ -1,0 +1,9 @@
+
+wilayah_indonesia_province.province_generate_form:
+  path: '/wilayah_indonesia_province/form/province_generate'
+  defaults:
+    _form: '\Drupal\wilayah_indonesia_province\Form\ProvinceGenerateForm'
+    _title: 'ProvinceGenerateForm'
+  requirements:
+    _access: 'TRUE'
+  
